@@ -2,11 +2,18 @@
 <html>
   <head>
     <title>Phoebe's Links</title>
+   
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- The above meta tag tells phones to report their true viewport 
+     size to us, so that our CSS can respond accordingly. -->
+     
     <style>
+        /* debugging border:
         * {
             border: thin blue dashed;
         }
+        */
     </style>
     <!-- The * selector targets every element in the document. -->
     
@@ -19,11 +26,12 @@
         min-height: 10%;
         padding-top: 40px;
         padding-bottom: 40px;
-        color: rgb(216, 17, 17);
+        color: rgb(59, 67, 13);
+        font-family: "Verdana";        /* Local fonts */
         background: linear-gradient(90deg, #e8eeff, #f0ecff, #f8ebfc, #ffeaf6, #ffe9f0, #ffeae8, #ffece2, #ffefde);
         }
     
-        a {color:rgb(5, 116, 85);}
+        a {color:rgb(4, 160, 116);}
     </style>
 
    <style>
@@ -40,12 +48,57 @@
             object-fit: cover;}
         .item {
             background-color: rgba(149, 123, 173, 0.5);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            border-radius: 1000px;            /* rounded the edges of each item */
+            padding: 5px;           /* gave each item a bit of padding: */
+            padding-right: 53px;
+            /* The link text isn’t perfectly centered within the item, 
+            because the thumbnail image is pushing it to the right by 48 pixels.
+            To correct for this, let’s give each item an additional 48 pixels padding on the right side: */
+            box-shadow: 4px 4px 10px 0px rgba(122,32,122,0.5);
+            /* used a CSS box-shadow generator to create a subtle shadow */
         }
+
         .main-container {
             max-width: 640px;
+            /* there’s a problem with using 'width: 640px': 
+            if you resize your browser to be narrower than 640 pixels, 
+            the content overflows the viewport. To fix this, use max-width instead
+            
+            Now, the <div class="main-container"> will be 640 pixels wide 
+            if the viewport is wider than that, 
+            div.main-container will fill 100% of the viewport if it is narrower than that.
+            --nice experience for both desktop users and phone users. */
             margin: auto;
-    }
+        }
+        .image-row {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .name-row {
+            margin-bottom: 30px;
+            text-align: center;
+            font-family: "Lucida Console";
+            font-size: 24px;
+            font-weight: 900;
+        }
+        .social-icons-row{
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: space-around;
+        }
+        .link-text {
+            text-align: center;
+            flex-grow: 1;
+            /* make the <a> grow to occupy all of the available space in its parent with the flex-grow property */
+        }
+
     </style>
+
+
+  
 
   </head>
   
@@ -75,15 +128,15 @@
         <div class="links-row">
             <div class="item">
                 <img class="thumbnail" src="/pictures/thumbnail1.png">
-                <a href="https://en.wikipedia.org/wiki/Taylor_Swift" target="_blank">Link 1</a>
+                <a class="link-text" href="https://chatgpt.com/" target="_blank">Look for somthing?</a>
             </div>
             <div class="item">
                 <img class="thumbnail" src="/pictures/thumbnail2.png">
-                <a href="https://vsokolov.org/html/_book/01-prob.html" target="_blank">Link 2</a>
+                <a class="link-text" href="https://vsokolov.org/html/_book/01-prob.html" target="_blank">Maybe you are looking for this</a>
             </div>
             <div class="item">
                 <img class="thumbnail" src="/pictures/thumbnail3.png">
-                <a href="https://www.uchicago.edu/education-and-research/academic-calendar#nav-current" target="_blank">Link 3</a>
+                <a class="link-text" href="https://www.uchicago.edu/education-and-research/academic-calendar#nav-current" target="_blank">Or you should check this out</a>
             </div>
         </div><!-- links-row -->
     </div><!-- main-container -->
