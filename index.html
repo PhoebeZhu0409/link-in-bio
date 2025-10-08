@@ -1,1 +1,91 @@
-<body>My link-in-bio</body>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Phoebe's Links</title>
+    <meta charset="UTF-8">
+    <style>
+        * {
+            border: thin blue dashed;
+        }
+    </style>
+    <!-- The * selector targets every element in the document. -->
+    
+    <style>
+    html {
+        min-height: 10%;
+    }
+    
+     body {
+        min-height: 10%;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        color: rgb(216, 17, 17);
+        background: linear-gradient(90deg, #e8eeff, #f0ecff, #f8ebfc, #ffeaf6, #ffe9f0, #ffeae8, #ffece2, #ffefde);
+        }
+    
+        a {color:rgb(5, 116, 85);}
+    </style>
+
+   <style>
+        .main-image {
+            width: 330px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 300px;
+        }
+        .thumbnail {
+            width: 30px;
+            height: 30px;
+            border-radius: 30px;
+            object-fit: cover;}
+        .item {
+            background-color: rgba(149, 123, 173, 0.5);
+        }
+        .main-container {
+            max-width: 640px;
+            margin: auto;
+    }
+    </style>
+
+  </head>
+  
+  <body>
+    <div class="main-container">
+        <div class="image-row">
+            <img class="main-image" src="/pictures/pic1.jpg" alt="Patagonia">
+        </div>
+        <div class="name-row">
+            Phoebe Zhu
+        </div>
+        <div class="social-icons-row">
+            <a href="https://github.com/PhoebeZhu0409" target="_blank">
+                <!-- Want my links to open in a new tab when clicked, include target="_blank" attribute -->
+                GitHub
+            </a>
+            <a href="https://www.linkedin.com/in/phoebe-zhu/" target="_blank">
+                LinkedIn
+            </a>
+            <a href="https://www.strava.com/athletes/105799992"  target="_blank">
+                Strava
+            </a>
+            <a href="https://www.instagram.com/PhoebeZhu0409/">
+                Instagram
+            </a>
+        </div>
+        <div class="links-row">
+            <div class="item">
+                <img class="thumbnail" src="/pictures/thumbnail1.png">
+                <a href="https://en.wikipedia.org/wiki/Taylor_Swift" target="_blank">Link 1</a>
+            </div>
+            <div class="item">
+                <img class="thumbnail" src="/pictures/thumbnail2.png">
+                <a href="https://vsokolov.org/html/_book/01-prob.html" target="_blank">Link 2</a>
+            </div>
+            <div class="item">
+                <img class="thumbnail" src="/pictures/thumbnail3.png">
+                <a href="https://www.uchicago.edu/education-and-research/academic-calendar#nav-current" target="_blank">Link 3</a>
+            </div>
+        </div><!-- links-row -->
+    </div><!-- main-container -->
+  </body>
+</html>
